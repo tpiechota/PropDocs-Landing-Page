@@ -52,22 +52,33 @@
             height: 100%;
         }
 
-        #clients .wow img {
-            max-width: 180px;
-            height: auto;
-            width: auto;
-            -webkit-filter: grayscale(100%);
+
+        #clients .row img {
+            max-width: 120px;
+            /*-webkit-filter: grayscale(100%);
             -moz-filter: grayscale(100%);
             -o-filter: grayscale(100%);
             -ms-filter: grayscale(100%);
-            filter: grayscale(100%);
+            filter: grayscale(100%);*/
         }
-        #clients .wow img:hover {
+        #clients .row img:hover {
             -webkit-filter: grayscale(0%);
             -moz-filter: grayscale(0%);
             -o-filter: grayscale(0%);
             -ms-filter: grayscale(0%);
             filter: grayscale(0%);
+        }
+        .vertical-center {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #hero-area {
+            padding-top: 50px;
+        }
+        .video-col {
+            padding-left: 0;
+            padding-right: 0;
         }
     </style>
 </head>
@@ -91,7 +102,7 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav col-md-9 pull-right">
-                    <li class="pull-right">Talk To Customer Service Agent <a href="tel:0035301493156"><i class="fa fa-phone"></i> (01)493156</a></li>
+                    <li class="pull-right">Talk To Customer Service Agent <a href="tel:0035301493156"><i class="fa fa-phone"></i>(01) 493156</a></li>
                 </ul>
             </div>
         </div>
@@ -107,22 +118,39 @@
             <div class="col-md-12">
                 <h2 class="title">Free PropDocs - It's a game changer for agents!</h2>
                 <h4 class="subtitle">PropDocs offers you a simple system of staying on top of what needs to be done to progress a residential rental property through the "move-in" and "move-out" stage of rental cycle, thus ensuring your customer maximises their properties return on investment. Oh and we pay you!</h4>
-
-                <!--<img class="col-md-6 col-sm-6 col-xs-12 animated fadeInLeft" src="assets/img/hero/macbook.png" alt="">-->
-                <div class="col-md-6 col-sm-6 col-xs-12 animated fadeInLeft delay-0-1">
-                    <div id="head-vid-holder">
-                        <div class="video-container">
-                            <iframe width="300" height="169" src="https://www.youtube.com/embed/I-DYQtdqfmQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                        </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--<img class="col-md-6 col-sm-6 col-xs-12 animated fadeInLeft" src="assets/img/hero/macbook.png" alt="">-->
+            <div class="video-col col-md-7 col-sm-7 col-xs-12 animated fadeInLeft delay-0-1">
+                <div id="head-vid-holder">
+                    <div class="video-container">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/I-DYQtdqfmQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-6 col-sm-6 col-xs-12 animated fadeInRight delay-0-5">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book</p>
-                    <a href="#" class="btn btn-common btn-lg">Donload Now!</a>
-                    <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+            <div class="col-md-5 col-sm-5 col-xs-12 animated fadeInRight delay-0-5" style="background-color: #282936">
+                <div class="row" style="background-color: #004E89; padding: 0 2%;">
+                    <div class="col-xs-12">
+                        <h2 class="title">Join free for a month</h2>
+                        <h4 class="subtitle">Once signed in, you’ll have unlimited access to the PropDocs portal and all its features, for free! Use anytime, cancel anytime.</h4>
+                    </div>
+                </div>
+                <div class="row" style="background-color: #282936;padding: 0 5%;">
+                    <div class="col-xs-12">
+                        <form>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Example label</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Another label</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create account</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,26 +165,27 @@
 
     <div class="container" style="text-align: center">
         <div class="row">
-            <div class="wow fadeInDown">
-               <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="" src="assets/img/clients/bookaroom.png" alt="client-1"></div>
-               <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="" src="assets/img/clients/deposify.png" alt="client-2"></div>
-               <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="" src="assets/img/clients/dng.png" alt="client-3"></div>
-               <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="" src="assets/img/clients/grantthorthon.jpg" alt="client-4"></div>
+            <div class="animated fadeInUpBig">
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" class="vertical-center" src="assets/img/clients/dng.png" alt="client-3"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/jll.png" alt="client-7"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/sdcc.gif" alt="client-8"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/usi.jpg" alt="client-10"></div>
             </div>
         </div>
         <div class="row">
-            <div class="wow fadeInDown">
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/hookemacdonald.png" alt="client-5">
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/ires.gif" alt="client-6">
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/jll.png" alt="client-7">
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/sdcc.gif" alt="client-8">
+            <div class="animated fadeInUpBig">
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/sherryfitz.jpg" alt="client-9"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/ires.jpg" alt="client-6"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/waterfordhomerental.jpg" alt="client-11"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/hookemacdonald.jpg" alt="client-5"></div>
             </div>
         </div>
         <div class="row">
-            <div class="wow fadeInDown">
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/sherryfitz.jpeg" alt="client-9">
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/usi.jpeg" alt="client-10">
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/waterfordhomerental.jpeg" alt="client-11">
+            <div class="animated fadeInUpBig">
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/bookaroom.png" alt="client-1"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/deposify.png" alt="client-2"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/grantthorthon.jpg" alt="client-4"></div>
+                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"></div>
             </div>
         </div>
     </div>

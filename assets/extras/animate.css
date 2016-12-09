@@ -43,6 +43,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-delay: 1.8s;
   /* Safari and Chrome */
 }
+.delay-2 {
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  /* Safari and Chrome */
+}
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;

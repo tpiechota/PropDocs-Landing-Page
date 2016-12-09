@@ -23,9 +23,6 @@ a:hover {
 .row {
   padding: 10px 0px;
 }
-#clients .row {
-  padding: 15px;
-}
 .btn {
   border: none;
   -webkit-transition: all 0.2s linear;
@@ -135,18 +132,18 @@ a.navbar-brand img {
   color: #e74c3c;
 }
 /*Portfolio*/
-#portfolio {
+#howitworks {
   background: #f1f1f1;
 }
 /*Portfolio Overlay */
-.portfolio-item {
+.howitworkso-item {
   position: relative;
   margin-bottom: 15px;
 }
-.portfolio-item img {
+.howitworks-item img {
   width: 100%;
 }
-.portfolio-item .overlay {
+.howitworks-item .overlay {
   position: absolute;
   top: 0;
   width: 100%;
@@ -155,7 +152,7 @@ a.navbar-brand img {
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
-.portfolio-item:hover .overlay {
+.howitworks-item:hover .overlay {
   position: absolute;
   top: 0;
   width: 100%;
@@ -164,7 +161,7 @@ a.navbar-brand img {
   background-color: rgba(0, 0, 0, 0.8);
   display: block;
 }
-.portfolio-item .icons .preview {
+.howitworks-item .icons .preview {
   position: absolute;
   left: 40%;
   top: 40%;
@@ -176,7 +173,7 @@ a.navbar-brand img {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.portfolio-item .icons .preview i {
+.howitworks-item .icons .preview i {
   color: #e74c3c;
 }
 #clients {

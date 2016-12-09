@@ -8,7 +8,6 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
     <!-- Main Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
@@ -79,6 +78,15 @@
         .video-col {
             padding-left: 0;
             padding-right: 0;
+        }
+        #howitworks .row img.step {
+            max-width: 100%;
+        }
+        .relative {
+            position: relative; height: 480px
+        }
+        .absolute {
+            position: absolute; bottom: 0;
         }
     </style>
 </head>
@@ -165,33 +173,67 @@
 
     <div class="container" style="text-align: center">
         <div class="row">
-            <div class="animated fadeInUpBig">
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" class="vertical-center" src="assets/img/clients/dng.png" alt="client-3"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/jll.png" alt="client-7"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/sdcc.gif" alt="client-8"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/usi.jpg" alt="client-10"></div>
+            <div class="animated fadeInRight delay-0-5">
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12 col-md-offset-1"><img class="vertical-center" src="assets/img/clients/deposify.png" alt="client-2"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/jll.png" alt="client-7"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/sdcc.gif" alt="client-8"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/usi.jpg" alt="client-10"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/grantthorthon.jpg" alt="client-4"></div>
             </div>
         </div>
         <div class="row">
-            <div class="animated fadeInUpBig">
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/sherryfitz.jpg" alt="client-9"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/ires.jpg" alt="client-6"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/waterfordhomerental.jpg" alt="client-11"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/hookemacdonald.jpg" alt="client-5"></div>
+            <div class="animated fadeInLeft delay-0-5">
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12 col-md-offset-1"><img class="vertical-center" src="assets/img/clients/sherryfitz.jpg" alt="client-9"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/ires.jpg" alt="client-6"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/dng.png" alt="client-3"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/waterfordhomerental.jpg" alt="client-11"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/hookemacdonald.jpg" alt="client-5"></div>
             </div>
         </div>
-        <div class="row">
+       <!-- <div class="row">
             <div class="animated fadeInUpBig">
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/bookaroom.png" alt="client-1"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/deposify.png" alt="client-2"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"><img class="vertical-center" src="assets/img/clients/grantthorthon.jpg" alt="client-4"></div>
-                <div class="col-md-3 col-md-3 col-sm-3 col-xs-12"></div>
+                <div class="col-xs-12"><img class="vertical-center" src="assets/img/clients/bookaroom.png" alt="client-1"></div>
             </div>
-        </div>
+        </div>-->
     </div>
 </section>
 <!-- Client Section End -->
 
+<!-- How It Works Section -->
+
+<section id="howitworks">
+    <div class="container">
+        <h1 class="title">How It Works</h1>
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-md-offset-1 relative">
+                <div class="absolute">
+                    <img class="step animated fadeInLeftBig delay-0-1" src="assets/img/howitworks/step_1.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 relative">
+                <div class="absolute">
+                    <img class="step animated fadeInLeftBig delay-0-5" src="assets/img/howitworks/step_2.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 relative">
+                <div class="absolute">
+                    <img class="step animated fadeInLeftBig delay-1" src="assets/img/howitworks/step_3.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 relative">
+                <div class="absolute">
+                    <img class="step animated fadeInLeftBig delay-1-5" src="assets/img/howitworks/step_4.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 relative">
+                <div class="absolute">
+                    <img class="step animated fadeInLeftBig delay-2" src="assets/img/howitworks/step_5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section End -->
 
 <!-- Service Section -->
 <section id="services">
@@ -234,22 +276,21 @@
 <!-- Service Section End -->
 
 
-<!-- Portfolio Section -->
+<!-- How It Works Section -->
 
-<section id="portfolio">
+<section id="howitworks">
     <div class="container">
         <div class="row">
-            <h1 class="title">Portfolio</h1>
+            <h1 class="title">How It Works</h1>
             <h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
 
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="portfolio-item wow fadeInLeft" data-wow-delay=".5s">
+                <div class="howitworks-item wow fadeInLeft" data-wow-delay=".5s">
                     <a href="#"><img src="assets/img/portfolio/img1.jpg" alt=""></a>
                     <div class="overlay">
                         <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img1.jpg" class="preview"><i
-                                    class="fa fa-search-plus fa-4x"></i></a>
+                            <a data-lightbox="image1" href="assets/img/portfolio/img1.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -257,60 +298,55 @@
 
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="portfolio-item wow fadeInLeft" data-wow-delay=".7s">
+                <div class="howitworks-item wow fadeInLeft" data-wow-delay=".7s">
                     <a href="#"><img src="assets/img/portfolio/img2.jpg" alt=""></a>
                     <div class="overlay">
                         <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img2.jpg" class="preview"><i
-                                    class="fa fa-search-plus fa-4x"></i></a>
+                            <a data-lightbox="image1" href="assets/img/portfolio/img2.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="portfolio-item wow fadeInLeft" data-wow-delay=".9s">
+                <div class="howitworks-item wow fadeInLeft" data-wow-delay=".9s">
                     <a href="#"><img src="assets/img/portfolio/img3.jpg" alt=""></a>
                     <div class="overlay">
                         <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img3.jpg" class="preview"><i
-                                    class="fa fa-search-plus fa-4x"></i></a>
+                            <a data-lightbox="image1" href="assets/img/portfolio/img3.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.1s">
-                <div class="portfolio-item">
+                <div class="howitworks-item">
                     <a href="#"><img src="assets/img/portfolio/img4.jpg" alt=""></a>
                     <div class="overlay">
                         <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img4.jpg" class="preview"><i
-                                    class="fa fa-search-plus fa-4x"></i></a>
+                            <a data-lightbox="image1" href="assets/img/portfolio/img4.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.3s">
-                <div class="portfolio-item">
+                <div class="howitworks-item">
                     <a href="#"><img src="assets/img/portfolio/img5.jpg" alt=""></a>
                     <div class="overlay">
                         <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img5.jpg" class="preview"><i
-                                    class="fa fa-search-plus fa-4x"></i></a>
+                            <a data-lightbox="image1" href="assets/img/portfolio/img5.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.5s">
-                <div class="portfolio-item">
+                <div class="howitworks-item">
                     <a href="#"><img src="assets/img/portfolio/img6.jpg" alt=""></a>
                     <div class="overlay">
                         <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img6.jpg" class="preview"><i
-                                    class="fa fa-search-plus fa-4x"></i></a>
+                            <a data-lightbox="image1" href="assets/img/portfolio/img6.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -463,6 +499,16 @@
 <!-- All JS plugin Triggers -->
 <script src="assets/js/main.js"></script>
 
-
+<script>
+    $(function() {
+        $.fn.equalizeHeights = function() {
+            var maxHeight = this.map(function( i, e ) {
+                return $( e ).height();
+            }).get();
+            return this.height( Math.max.apply( this, maxHeight ) );
+        };
+        $( "#howitworks .row > div" ).equalizeHeights();
+    });
+</script>
 </body>
 </html>

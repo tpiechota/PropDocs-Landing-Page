@@ -7,39 +7,273 @@
 
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <!-- Main Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-
-    <!-- Responsive Style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-
-    <!--Icon Fonts-->
-    <link rel="stylesheet" media="screen" href="assets/fonts/font-awesome/font-awesome.min.css"/>
-
-
-    <!-- Extras -->
     <link rel="stylesheet" type="text/css" href="assets/extras/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/extras/lightbox.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/3842f28bf7.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
 
-    <!-- jQuery Load -->
-    <script src="assets/js/jquery-min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
     <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-font-smoothing: subpixel-antialiased;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        a {
+            color: #34495E;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+        a:hover {
+            color: #e76c3c;
+        }
+        .row {
+            padding: 10px 0px;
+        }
+        .btn {
+            border: none;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+            text-transform: uppercase;
+            border-radius: 0;
+        }
+        .title, .title-2 {
+            text-align: center;
+            /*color: #FFC820;
+            font-size: 50px;*/
+        }
+        .title-2 {
+            font-weight: bold;
+            color: #FFC820;
+        }
+        .subtitle, .subtitle-2, .subtitle-3 {
+            text-align: center;
+            /*font-weight: 100;*/
+            padding-bottom: 30px;
+            position: relative;
+            color: #bdc3c7;
+            line-height: 1.3em;
+        }
+        .subtitle-2 {
+            font-weight: 300 !important;
+            color: #fff;
+        }
+        .subtitle-3 {
+            padding-bottom: 10px;
+            font-weight: 400 !important;
+            color: #fff;
+        }
+        .navbar {
+            margin-bottom: 0;
+        }
+        .navbar li {
+            color: #fffded;
+        }
+        .navbar-default {
+            border: none;
+            border-radius: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover,
+        .navbar-default .navbar-nav > .active > a:focus {
+            background: none;
+            color: #fff;
+        }
+        .navbar-default .navbar-nav li {
+            color: #fff;
+            font-weight: 100;
+            min-height: 52px;
+            line-height: 52px;
+        }
+        .navbar-default .navbar-nav li a,
+        .navbar-default .navbar-nav li a:hover {
+            color: #fff;
+            display: inline;
+        }
+        .navbar-default .navbar-nav > .active,
+        .navbar-default .navbar-nav li:hover {
+            /*background: #e74c3c;
+            padding-bottom: 5px;*/
+            color: #fff;
+        }
+        .navbar-default .navbar-brand {
+            font-size: 25px;
+            color: #fff;
+            font-weight: 100;
+        }
+        .navbar-default .navbar-brand:hover {
+            color: #eee;
+        }
+        a.navbar-brand {
+            padding: 10px 15px;
+            display: inline-block;
+            height: auto;
+        }
+        a.navbar-brand img {
+            width: 100%;
+        }
+        .navbar-fixed-top.affix {
+            background-color: rgba(0,0,0,0.75) !important;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+        .logo-menu .nav li {
+            font-weight: normal;
+        }
+        .logo-menu .nav li {
+            font-weight: normal;
+        }
+        #navbar {
+            font-size: 1.2em;
+        }
+        #hero-area {
+            background: #34495e;
+            color: #fff;
+        }
+        #hero-area .btn {
+            margin-right: 20px;
+        }
+        #hero-area img {
+            max-width: 100%;
+        }
+        #hero-area p {
+            /*padding: 50px 0;*/
+        }
+        #faq p {
+            font-size: 0.9em;
+            font-family: 'Roboto', sans-serif;
+        }
+        /*howitworks*/
+        #howitworks {
+            background: #f9f9f9;
+        }
+        /*Portfolio Overlay */
+        .howitworks-item img {
+            width: 100%;
+        }
+        .howitworks-item .icons .preview i {
+            color: #e74c3c;
+        }
+        #trusted {
+            background: #fff;
+        }
+        #action {
+            background: #34495e;
+            color: #fff;
+        }
+        #action p {
+            line-height: 100px;
+            font-size: 17px;
+        }
+        #contact {
+            background: #f1f1f1;
+        }
+        #contact ::-webkit-input-placeholder {
+            color: #ecf0f1;
+        }
+        #contact :-moz-placeholder {
+            color: #ecf0f1;
+        }
+        #contact ::-moz-placeholder {
+            color: #ecf0f1;
+        }
+        #contact :-ms-input-placeholder {
+            color: #ecf0f1;
+        }
+        #contact .social i {
+            color: #fff;
+            padding: 10px;
+            margin-right: 5px;
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            background: #34495e;
+        }
+        #contact .social .social-links a:hover {
+            color: #fff;
+        }
+        #contact .social .fa-facebook:hover {
+            background: #3b5998;
+            color: #fff;
+        }
+        #contact .social .fa-twitter:hover {
+            background: #00CAFB;
+            color: #fff;
+        }
+        #contact .social .fa-linkedin:hover {
+            background: #007bb6;
+            color: #fff;
+        }
+        #contact .contact-info {
+            margin: 40px 0;
+        }
+        #contact .contact-info p {
+            font-size: 20px;
+        }
+
+        /*Scroll Top*/
+        .to-top i {
+            padding: 10px 15px;
+            margin: 10px;
+            background: transparent;
+            color: #34495e;
+            border: 2px solid #34495e;
+        }
+        .to-top i:hover {
+            background: #34495e;
+            color: #fff;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+
+        #copyright {
+            background: #F1F1F1;
+            color: #333;
+        }
+        #copyright a {
+            color: #333;
+        }
+
+        body > section {
+            padding-top:25px;
+            padding-bottom:25px;
+        }
+        a:hover {
+            text-decoration: none;
+        }
         .video-container {
             position: relative;
             padding-bottom: 56%;
-            padding-top: 0px;
+            padding-top: 1px;
             height: 0;
             overflow: hidden;
-            border: 1px solid #3c556d;
+            /*border: 1px solid #3c556d;*/
         }
         .video-container iframe,
         .video-container object,
@@ -50,17 +284,15 @@
             width: 100%;
             height: 100%;
         }
-
-
-        #clients .row img {
+        #trusted .row img {
             max-width: 120px;
-            /*-webkit-filter: grayscale(100%);
+/*            -webkit-filter: grayscale(100%);
             -moz-filter: grayscale(100%);
             -o-filter: grayscale(100%);
             -ms-filter: grayscale(100%);
             filter: grayscale(100%);*/
         }
-        #clients .row img:hover {
+        #trusted .row img:hover {
             -webkit-filter: grayscale(0%);
             -moz-filter: grayscale(0%);
             -o-filter: grayscale(0%);
@@ -83,18 +315,103 @@
             max-width: 100%;
         }
         .relative {
-            position: relative; height: 480px
+            position: relative;
+            height: 410px;
+            text-align: center;
         }
         .absolute {
-            position: absolute; bottom: 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .row-form {
+            background-color: #282936;
+        }
+        .form-propdocs {
+            margin: 35px 20px;
+        }
+        .client-quote {
+            background-color: #F9F9F9;
+            padding: 20px;
+            color: #34495e;
+            width: 90%;
+            margin: auto;
+        }
+        .client-quote blockquote {
+            position: relative;
+            border-left: none;
+        }
+        .client-quote blockquote p {
+            position: relative;
+            font-style: italic;
+            z-index: 2;
+        }
+        .client-quote blockquote footer {
+
+        }
+        .client-quote blockquote .custom-quote-left,
+        .client-quote blockquote .custom-quote-right {
+            position: absolute;
+            color: #eee;
+            z-index: 0;
+        }
+        .client-quote blockquote .custom-quote-left {
+            top: 0;
+            left: 10px;
+        }
+        .client-quote blockquote .custom-quote-right {
+            bottom: 0;
+            right: 10px;
+        }
+        .carousel-control.right, .carousel-control.left {
+            background-image: none;
+            color: #272835;
+        }
+        .carousel-indicators li {
+            border-color: #272835;
+        }
+        .carousel-indicators li.active {
+            background-color: #272835;
+        }
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        @media screen and (min-width: 768px) {
+            .carousel-indicators {
+                bottom: 10px;
+            }
+            .client-quote {
+                width: 60%;
+            }
+        }
+        #testimonials {
+            background-color: #F8F8F8;
+        }
+        .steps-xs div[class*="col-"] {
+            margin-bottom: 20px;
+        }
+        .steps-xs span.glyphicon {
+            font-size: 3em;
+        }
+        .benefits h1, .benefits h2 {
+            color: #FFC820;
+        }
+        .benefits ul li {
+            margin: 10px 0;
+            padding: 0 10px;
+            font-size: 1.2em;
         }
     </style>
 </head>
 
-<body data-spy="scroll" data-offset="20" data-target="#navbar">
+<body data-spy="scroll" data-offset="20" data-target="#navbar" >
 <!-- Nav Menu Section -->
 <div class="logo-menu">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="600">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header col-md-3">
@@ -104,13 +421,13 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>-->
-                <a class="navbar-brand" href="#home"><img
-                        src="https://propertybutton.io/wp-content/uploads/2016/05/pb_logo_new-1.svg"
-                        alt="Property Button Logo"></a>
+                <a class="navbar-brand" href="#">
+                    <img src="https://propertybutton.io/wp-content/uploads/2016/05/pb_logo_new-1.svg" alt="Property Button Logo">
+                </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav col-md-9 pull-right">
-                    <li class="pull-right">Talk To Customer Service Agent <a href="tel:0035301493156"><i class="fa fa-phone"></i>(01) 493156</a></li>
+                    <li class="pull-right">Talk To Customer Service Agent <a href="tel:003539696091"><i class="fa fa-phone"></i>&nbsp;(01) 969 6091</a></li>
                 </ul>
             </div>
         </div>
@@ -119,15 +436,16 @@
 <!-- Nav Menu Section End -->
 
 <!-- Hero Area Section -->
-
 <section id="hero-area">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="title">Free PropDocs - It's a game changer for agents!</h2>
-                <h4 class="subtitle">PropDocs offers you a simple system of staying on top of what needs to be done to progress a residential rental property through the "move-in" and "move-out" stage of rental cycle, thus ensuring your customer maximises their properties return on investment. Oh and we pay you!</h4>
+                <h2 class="title-2">Free PropDocs - It's a game changer for agents!</h2>
+                <h4 class="subtitle-2">PropDocs offers you a simple system of staying on top of what needs to be done to progress a residential rental property through the "move-in" and "move-out" stage of rental cycle, thus ensuring your customer maximises their properties return on investment. Oh and we pay you!</h4>
             </div>
+            <div id="top"></div>
         </div>
+
         <div class="row">
             <!--<img class="col-md-6 col-sm-6 col-xs-12 animated fadeInLeft" src="assets/img/hero/macbook.png" alt="">-->
             <div class="video-col col-md-7 col-sm-7 col-xs-12 animated fadeInLeft delay-0-1">
@@ -136,75 +454,177 @@
                         <iframe width="300" height="169" src="https://www.youtube.com/embed/I-DYQtdqfmQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
+                <div class="benefits">
+                    <h1 class="title-2">Benefits included with your free account:</h1>
+                    <ul>
+                        <li>PropDocs offers you an unlimited amount of securely branded property documents to send each month for electronic signature thus ensuring significant cost savings and efficiencies</li>
+                        <li>PropDocs is linked to our utility management service thereby ensuring you and your staff receive a commission on every tenancy set-up</li>
+                        <li>Instantly see your document status using your very own PropDoc dashboard which also identifies what additional steps are needed to ensure a rental property’s occupancy is maximised</li>
+                        <li>Our system will automatically remind recipients for signature so you don’t have to</li>
+                        <li>A complete audit trail of all tenant communication and other relevant property documents is available in one simple to access location</li>
+                        <li>A complete deposit management service for your landlords and tenants (optional)</li>
+                        <li>Boost your reputation by offering landlords and tenants a streamlined digital service that maximises occupancy, saves time and provides greater return on investment</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="col-md-5 col-sm-5 col-xs-12 animated fadeInRight delay-0-5" style="background-color: #282936">
+            <div class="col-md-5 col-sm-5 col-xs-12 animated fadeInRight delay-0-5">
                 <div class="row" style="background-color: #004E89; padding: 0 2%;">
                     <div class="col-xs-12">
-                        <h2 class="title">Join free for a month</h2>
-                        <h4 class="subtitle">Once signed in, you’ll have unlimited access to the PropDocs portal and all its features, for free! Use anytime, cancel anytime.</h4>
+                        <h2 class="title-2">Join free for a month</h2>
+                        <h4 class="subtitle-3">Once signed in, you’ll have unlimited access to the PropDocs portal and all its features, for free! Use anytime, cancel anytime.</h4>
                     </div>
-                </div>
-                <div class="row" style="background-color: #282936;padding: 0 5%;">
+                </div><!-- / .row-->
+                <div class="row row-form">
                     <div class="col-xs-12">
-                        <form>
+                        <form class="form-propdocs">
                             <div class="form-group">
-                                <label for="formGroupExampleInput">Example label</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                <label for="form-name">What do we call you?</label>
+                                <input type="text" class="form-control" id="form-name" placeholder="Your name">
                             </div>
                             <div class="form-group">
-                                <label for="formGroupExampleInput2">Another label</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                                <label for="form-name">Your work email</label>
+                                <input type="email" class="form-control" id="form-email" placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-password">Password</label>
+                                <input type="password" class="form-control" id="form-password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-why">What is your main goal with PropDocs?</label>
+                                <select class="form-control" id="form-why">
+                                    <option></option>
+                                    <option>Improve ROI by connecting my tenant communication with closed sales</option>
+                                    <option>Send unlimited property documents for electronic signature</option>
+                                    <option>Earn unlimited commission from the tenant utility management service</option>
+                                    <option>Reduce administrative burdens on setting tenants up at new properties</option>
+                                    <option>Use the dashboard to identify what move-in / out actions are still to be taken</option>
+                                    <option>Provide a more robust digital audit trail of property documents in one place</option>
+                                    <option> All of the above</option>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Create account</button>
                         </form>
                     </div>
-                </div>
+                </div><!-- / .row-->
             </div>
-        </div>
+        </div><!-- / .row-->
     </div>
 </section>
 <!-- Hero Area Section End-->
 
-<!-- Client Section -->
-<section id="clients">
+<!-- Trusted By Section -->
+<section id="testimonials">
+    <h1 class="title">What Our Partners Say</h1>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="client-quote">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">They make the whole experience of setting up a new tenancy easy and for me that’s the essence of business, making the experience easy for the customer and I couldn’t recommend it more.</p>
+                        <i class="fa fa-quote-left fa-5x custom-quote-left" aria-hidden="true"></i>
+                        <i class="fa fa-quote-right fa-5x custom-quote-right" aria-hidden="true"></i>
+                        <footer class="blockquote-footer">Regina Mangan. <cite title="Source Title">Owner, Bookaroom</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="item">
+                <div class="client-quote">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">The staff at Property Button have taken all of the hassle out of utility transfers and they so in a friendly and approachable manner. The commission we receive adds up to the same cost of an employee a year – not mention the actual cost savings made too!</p>
+                        <i class="fa fa-quote-left fa-5x custom-quote-left" aria-hidden="true"></i>
+                        <i class="fa fa-quote-right fa-5x custom-quote-right" aria-hidden="true"></i>
+                        <footer class="blockquote-footer">Patrick Burke. <cite title="Source Title">Director of Sherry Fitzgerald Lettings</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<!-- Trusted By Section End -->
+
+<!-- Trusted By Section -->
+<section id="trusted">
     <h1 class="title">Trusted By</h1>
     <h2 class="subtitle"></h2>
 
-    <div class="container" style="text-align: center">
+    <div class="container hidden-xs" style="text-align: center">
         <div class="row">
             <div class="animated fadeInRight delay-0-5">
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12 col-md-offset-1"><img class="vertical-center" src="assets/img/clients/deposify.png" alt="client-2"></div>
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/jll.png" alt="client-7"></div>
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/sdcc.gif" alt="client-8"></div>
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/usi.jpg" alt="client-10"></div>
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/grantthorthon.jpg" alt="client-4"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12 col-md-offset-1"><img class="vertical-center" src="assets/img/clients/bookaroom.png" alt="Bookaroom"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/jll.png" alt="Jones Lang LaSalle"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/sdcc.gif" alt="South Dublin County Council"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/usi.jpg" alt="Union of Students in Ireland (USI)"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/grantthorthon.jpg" alt="Grant Thornton"></div>
+            </div>
+        </div><!-- / .row-->
+        <div class="row">
+            <div class="animated fadeInLeft delay-0-5">
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12 col-md-offset-1"><img class="vertical-center" src="assets/img/clients/sherryfitz.jpg" alt="Sherry Fitz"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/ires.jpg" alt="IRES"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/dng.png" alt="DNG"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/hookemacdonald.jpg" alt="Hook & McDonald"></div>
+                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/waterfordhomerental.jpg" alt="Waterford home rental"></div>
+            </div>
+        </div><!-- / .row-->
+    </div>
+    <div class="container visible-xs-block" style="text-align: center">
+        <div class="row">
+            <div class="animated fadeInRight delay-0-5">
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/deposify.png" alt="Deposify"></div>
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/jll.png" alt="Jones Lang LaSalle"></div>
             </div>
         </div>
         <div class="row">
             <div class="animated fadeInLeft delay-0-5">
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12 col-md-offset-1"><img class="vertical-center" src="assets/img/clients/sherryfitz.jpg" alt="client-9"></div>
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/ires.jpg" alt="client-6"></div>
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/dng.png" alt="client-3"></div>
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/waterfordhomerental.jpg" alt="client-11"></div>
-                <div class="col-md-2 col-md-2 col-sm-2 col-xs-12"><img class="vertical-center" src="assets/img/clients/hookemacdonald.jpg" alt="client-5"></div>
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/sdcc.gif" alt="South Dublin County Council"></div>
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/usi.jpg" alt="Union of Students in Ireland (USI)"></div>
             </div>
         </div>
-       <!-- <div class="row">
-            <div class="animated fadeInUpBig">
-                <div class="col-xs-12"><img class="vertical-center" src="assets/img/clients/bookaroom.png" alt="client-1"></div>
+        <div class="row">
+            <div class="animated fadeInRight delay-0-5">
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/sherryfitz.jpg" alt="Sherry Fitz"></div>
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/grantthorthon.jpg" alt="Grant Thornton"></div>
             </div>
-        </div>-->
+        </div>
+        <div class="row">
+            <div class="animated fadeInLeft delay-0-5">
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/ires.jpg" alt="IRES"></div>
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/dng.png" alt="DNG"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="animated fadeInRight delay-0-5">
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/hookemacdonald.jpg" alt="Hook & McDonald"></div>
+                <div class="col-xs-6"><img class="vertical-center" src="assets/img/clients/waterfordhomerental.jpg" alt="Waterford home rental"></div>
+            </div>
+        </div><!-- / .row-->
     </div>
 </section>
-<!-- Client Section End -->
+<!-- Trusted By Section End -->
 
 <!-- How It Works Section -->
-
 <section id="howitworks">
     <div class="container">
-        <h1 class="title">How It Works</h1>
-        <div class="row">
+        <h1 class="title" style="margin-bottom: 40px">How It Works</h1>
+        <div class="row hidden-xs">
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-md-offset-1 relative">
                 <div class="absolute">
                     <img class="step animated fadeInLeftBig delay-0-1" src="assets/img/howitworks/step_1.png" alt="">
@@ -230,84 +650,123 @@
                     <img class="step animated fadeInLeftBig delay-2" src="assets/img/howitworks/step_5.png" alt="">
                 </div>
             </div>
-        </div>
+        </div><!-- / .row-->
+
+        <div class="row visible-xs-block text-center steps-xs">
+            <div class="col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
+                    <h4>Step 1</h4>
+                    <p>Simply log in and populate the new tenant and property information form any device at any time.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <span class="glyphicon glyphicon-open-file" aria-hidden="true"></span>
+                    <h4>Step 2</h4>
+                    <p>Lease and other PropDocs will be automatically generated and sent to the tenant for electronic signature.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <span class="glyphicon glyphicon-save-file" aria-hidden="true"></span>
+                    <h4>Step 3</h4>
+                    <p>Tenant verifies, signs and returns the PropDocs digitally on any device at any time.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+                    <h4>Step 4</h4>
+                    <p>Your online dashboard keeps track of the status of all your PropDocs - sent, delivered, signed, received.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+                    <h4>Step 5</h4>
+                    <p>System follows up with any outstanding documents and reminders by email/SMS thereby removing associated hassle.</p>
+                </div>
+            </div>
+        </div><!-- / .row-->
     </div>
 </section>
-<!-- Portfolio Section End -->
+<!-- How It Works Section End -->
 
-<!-- Service Section -->
-<section id="services">
-    <div class="container text-center">
-        <div class="row">
-            <h1 class="title">What we do</h1>
-            <h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="service-item">
-                    <img src="assets/img/services/responsive.png" alt="">
-                    <h3>Fully Responsive</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text</p>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="service-item">
-                    <img src="assets/img/services/bs3.png" alt="">
-                    <h3>Bootstrap 3</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="service-item">
-                    <img src="assets/img/services/free.png" alt="">
-                    <h3>100% Free</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- Service Section End -->
-
-
-<!-- How It Works Section -->
-
-<section id="howitworks">
+<!-- FAQ Section -->
+<section id="faq">
     <div class="container">
         <div class="row">
-            <h1 class="title">How It Works</h1>
-            <h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="howitworks-item wow fadeInLeft" data-wow-delay=".5s">
-                    <a href="#"><img src="assets/img/portfolio/img1.jpg" alt=""></a>
-                    <div class="overlay">
-                        <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img1.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
-                        </div>
-                    </div>
+            <h1 class="title">FAQ’s</h1>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-md-offset-1">
+                <div class="faq-item">
+                    <h4>Is there a catch?</h4>
+                    <p>Nope, no funny business. All it takes to begin using our PropDocs feature is your email address and a few other pieces of information outlined above and you’ll have full access for a month.</p>
                 </div>
             </div>
-
-
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="howitworks-item wow fadeInLeft" data-wow-delay=".7s">
-                    <a href="#"><img src="assets/img/portfolio/img2.jpg" alt=""></a>
-                    <div class="overlay">
-                        <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img2.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
-                        </div>
-                    </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <h4>Are there any limits?</h4>
+                    <p>When you sign up for your free month, you will have FULL access to all benefits and features of PropDocs. After a month, you can decide if you would like to continue using the service for a monthly subscription of just £30 (€40). You can also decide to pay for a full year up-front at a 25% reduced rate. There will never be any cancellation fees or funny business. Use anytime, cancel anytime.</p>
                 </div>
             </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <h4>When and how do I get paid my commission?</h4>
+                    <p>We pay you a commision every two months. You can choose how you would like to receive it specifically (i.e. per agent or in total)</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <h4>How do Property Button make money?</h4>
+                    <p>Property Button are the largest channel to market for the major gas, electricity and media suppliers in the UK & Ireland who pay us for providing the service to our wonderful agents.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <h4>Are there any added costs to tenants?</h4>
+                    <p>Nope. Never was, never is, never will be.</p>
+                </div>
+            </div>
+        </div><!-- / .row-->
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-md-offset-1">
+                <div class="faq-item">
+                    <h4>Do I need to download any software?</h4>
+                    <p>There is no software requirements or installation. It couldn’t be easier, Property Button is an online portal and so all you need is your login details.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <h4>Do I need training?</h4>
+                    <p>It is very user friendly but Property Button will guide you through the process over the phone or in person if needed</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <h4>Will the tenant have a choice of supplier?</h4>
+                    <p>Yes, The tenant has can choose any supplier they like, Property Button will give the tenant the information needed such as tariffs and deals to make the best decision.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <h4>Are we compliant with data-protection laws?</h4>
+                    <p>Yes Property Button are fully compliant with european data protection law and and also the commissioner of energy regulations (UK & Ireland).</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <div class="faq-item">
+                    <h4>What do you do with the property and tenant information?</h4>
+                    <p>We will not do a thing without prior consent from you and the tenant. Once we receive tenant consent, we will use their information to identify what services are currently available at the property and assist them in setting up their accounts using the information they have already provided to you.</p>
+                </div>
+            </div>
+        </div><!-- / .row-->
+    </div>
+</section>
+<!-- FAQ Section End -->
 
+
+<!--
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="howitworks-item wow fadeInLeft" data-wow-delay=".9s">
                     <a href="#"><img src="assets/img/portfolio/img3.jpg" alt=""></a>
@@ -318,197 +777,69 @@
                     </div>
                 </div>
             </div>
+-->
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.1s">
-                <div class="howitworks-item">
-                    <a href="#"><img src="assets/img/portfolio/img4.jpg" alt=""></a>
-                    <div class="overlay">
-                        <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img4.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.3s">
-                <div class="howitworks-item">
-                    <a href="#"><img src="assets/img/portfolio/img5.jpg" alt=""></a>
-                    <div class="overlay">
-                        <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img5.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.5s">
-                <div class="howitworks-item">
-                    <a href="#"><img src="assets/img/portfolio/img6.jpg" alt=""></a>
-                    <div class="overlay">
-                        <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img6.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- Portfolio Section End -->
-
-
-<!-- Client Section -->
-<section id="clients">
+<!-- Call To Action Section -->
+<section id="action">
     <div class="container">
         <div class="row">
-
-            <h1 class="title">Clients</h1>
-            <h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
-
-            <div class="wow fadeInDown">
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/img1.png" alt="client-1">
-
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/img2.png" alt="client-2">
-
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/img3.png" alt="client-3">
-
-                <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/img4.png" alt="client-4">
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Client Section End -->
-
-
-<!-- About Section -->
-
-<section id="about">
-    <div class="container">
-        <div class="row">
-            <h1 class="title">About us</h1>
-            <h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
-
-            <div class="col-md-8 col-sm-12">
-                <p>
-                    A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring
-                    which I enjoy with my whole heart. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                    quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit
-                    elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply
-                    dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                    dummy text.
+            <div class="col-sm-12">
+                <p class="text-center">
+                    <a data-scroll class="btn btn-lg btn-primary" href="#top">Join free for a month</a>
                 </p>
             </div>
-
-            <img class="col-md-4 col-md-4 col-sm-12 col-xs-12" src="assets/img/about/graph.png" alt="">
-
         </div>
     </div>
 </section>
-<!-- About Section End -->
+<!-- Call To Action Section End -->
 
 
-<!-- Conatct Section -->
+<!-- Contact Section -->
 <section id="contact">
     <div class="container text-center">
         <div class="row">
-            <h1 class="title">Contact us</h1>
-
-            <h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
-
-
-            <form role="form" class="contact-form" method="post">
-                <div class="col-md-6 wow fadeInLeft" data-wow-delay=".5s">
-                    <div class="form-group">
-                        <div class="controls">
-                            <input type="text" class="form-control" placeholder="Name" name="name">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="controls">
-                            <input type="email" class="form-control email" placeholder="Email" name="email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="controls">
-                            <input type="text" class="form-control requiredField" placeholder="Subject" name="subject">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-
-                        <div class="controls">
-                            <textarea rows="7" class="form-control" placeholder="Message" name="message"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" id="submit" class="btn btn-lg btn-common">Send</button>
-                    <div id="success" style="color:#34495e;"></div>
-
-                </div>
-            </form>
-
-            <div class="col-md-6 wow fadeInRight">
+            <h1 class="title">Get in touch</h1>
+            <h1 class="title">&nbsp;</h1>
+            <div class="col-md-12 wow fadeInRight">
                 <div class="social-links">
-                    <a class="social" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-                    <a class="social" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a class="social" href="#" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
-                    <a class="social" href="#" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+                    <a class="social" href="https://www.facebook.com/propertybutton1/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a class="social" href="https://twitter.com/propertybutton" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a class="social" href="https://www.linkedin.com/company/3787049" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
                 </div>
                 <div class="contact-info">
-                    <p><i class="fa fa-map-marker"></i> Seattle, WA 00000, USA</p>
-                    <p><i class="fa fa-envelope"></i> info@yourwebsite.com</p>
+                    <p><i class="fa fa-phone"></i> <a href="tel:003539696091">(01) 969 6091</a></p>
+                    <p><i class="fa fa-envelope"></i> <a href="mailto:info@propertybutton.io">info@propertybutton.io</a></p>
                 </div>
-
-                <p>
-                    A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring
-                    which I enjoy with my whole heart. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                    quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit
-                    elit.<br>
-                </p>
-
             </div>
-
         </div>
     </div>
 </section>
+<!-- Contact Section End -->
 
-<!-- Conatct Section End-->
-
-
+<!-- Copyright Section -->
 <div id="copyright">
     <div class="container">
         <div class="col-md-10"><p>© <a href="https://propertybutton.io">Property Button</a> 2016 All right reserved.</p></div>
         <div class="col-md-2">
-            <span class="to-top pull-right"><a href="#hero-area"><i class="fa fa-angle-up fa-2x"></i></a></span>
+            <span class="to-top pull-right"><a data-scroll href="#hero-area"><i class="fa fa-angle-up fa-2x"></i></a></span>
         </div>
     </div>
 </div>
-<!-- Copyright Section End-->
-
-<!-- Bootstrap JS -->
-<script src="assets/js/bootstrap.min.js"></script>
-
-<!-- Smooth Scroll -->
-<!-- Smooth Scroll -->
-<script src="assets/js/smooth-scroll.js"></script>
-<script src="assets/js/lightbox.min.js"></script>
-
-<!-- All JS plugin Triggers -->
-<script src="assets/js/main.js"></script>
+<!-- Copyright Section End -->
 
 <script>
-    $(function() {
-        $.fn.equalizeHeights = function() {
+
+    $(document).ready(function(){
+        smoothScroll.init();
+        /*$.fn.equalizeHeights = function() {
             var maxHeight = this.map(function( i, e ) {
                 return $( e ).height();
             }).get();
             return this.height( Math.max.apply( this, maxHeight ) );
         };
-        $( "#howitworks .row > div" ).equalizeHeights();
+        $( "#howitworks .row > div" ).equalizeHeights(123);*/
     });
+
 </script>
 </body>
 </html>

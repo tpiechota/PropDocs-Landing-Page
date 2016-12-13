@@ -58,14 +58,41 @@
             text-transform: uppercase;
             border-radius: 0;
         }
-        .title, .title-2 {
-            text-align: center;
-            /*color: #FFC820;
-            font-size: 50px;*/
+        .btn-primary {
+            color: #fff;
+            background-color: #dd333b;
+            border: 1px solid #a62b2e;
         }
-        .title-2 {
+        .btn-primary:hover {
+            color: #fff;
+            background-color: transparent;
+            border: 1px solid #fff;
+        }
+        .btn-primary.active,
+        .btn-primary:active,
+        .btn-primary.focus,
+        .btn-primary:focus,
+        .btn-primary:active:focus{
+            color: #fff;
+            background-color: #dd333b;
+            border-color: #a62b2e;
+        }
+        .title-2-main {
+            color: #dd333b;
+        }
+        .title, .title-2, .title-2-form, .title-2-main {
+            text-align: center;
+
             font-weight: bold;
-            color: #FFC820;
+           /* font-size: 50px;*/
+        }
+
+        .title-2-form {
+            font-weight: 900;
+            font-weight: bolder;
+            color: #fff;
+            font-family: "Arial Black", sans-serif;
+            text-shadow: 1px 1px 7px #000;
         }
         .subtitle, .subtitle-2, .subtitle-3 {
             text-align: center;
@@ -76,8 +103,8 @@
             line-height: 1.3em;
         }
         .subtitle-2 {
-            font-weight: 300 !important;
-            color: #fff;
+            /*font-weight: 300 !important;*/
+            color: #333;
         }
         .subtitle-3 {
             padding-bottom: 10px;
@@ -93,7 +120,7 @@
         .navbar-default {
             border: none;
             border-radius: 0;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.75);
         }
         .navbar-default .navbar-nav > .active > a,
         .navbar-default .navbar-nav > .active > a:hover,
@@ -151,7 +178,7 @@
             font-size: 1.2em;
         }
         #hero-area {
-            background: #34495e;
+            background-color: #F9F9F9;
             color: #fff;
         }
         #hero-area .btn {
@@ -182,7 +209,7 @@
             background: #fff;
         }
         #action {
-            background: #34495e;
+            background: rgba(40,41,54,0.8);
             color: #fff;
         }
         #action p {
@@ -211,7 +238,7 @@
             width: 50px;
             height: 50px;
             vertical-align: middle;
-            background: #34495e;
+            background: rgba(40,41,54,0.8);
         }
         #contact .social .social-links a:hover {
             color: #fff;
@@ -240,11 +267,11 @@
             padding: 10px 15px;
             margin: 10px;
             background: transparent;
-            color: #34495e;
-            border: 2px solid #34495e;
+            color: rgba(40,41,54,0.8);
+            border: 2px solid rgba(40,41,54,0.8);
         }
         .to-top i:hover {
-            background: #34495e;
+            background: rgba(40,41,54,0.8);
             color: #fff;
             -webkit-transition: all 0.2s linear;
             -moz-transition: all 0.2s linear;
@@ -307,6 +334,7 @@
         #hero-area {
             padding-top: 50px;
         }
+
         .video-col {
             padding-left: 0;
             padding-right: 0;
@@ -325,42 +353,53 @@
             width: 100%;
         }
         .row-form {
-            background-color: #282936;
+            background-color: rgba(40,41,54,0.9);
         }
         .form-propdocs {
             margin: 35px 20px;
         }
-        .client-quote {
+        .client-quote,
+        .client-quote-form {
             background-color: #F9F9F9;
             padding: 20px;
             color: #34495e;
             width: 90%;
             margin: auto;
         }
-        .client-quote blockquote {
+        .client-quote-form {
+            width: 100%;
+        }
+        .client-quote blockquote,
+        .client-quote-form blockquote {
             position: relative;
             border-left: none;
         }
-        .client-quote blockquote p {
+        .client-quote blockquote p,
+        .client-quote-form blockquote p {
             position: relative;
             font-style: italic;
             z-index: 2;
         }
-        .client-quote blockquote footer {
+        .client-quote blockquote footer,
+        .client-quote-form blockquote footer {
             z-index: 2;
             position: relative;
         }
         .client-quote blockquote .custom-quote-left,
-        .client-quote blockquote .custom-quote-right {
+        .client-quote blockquote .custom-quote-right,
+        .client-quote-form blockquote .custom-quote-left,
+        .client-quote-form blockquote .custom-quote-right{
             position: absolute;
             color: #eee;
             z-index: 0;
         }
-        .client-quote blockquote .custom-quote-left {
+        .client-quote blockquote .custom-quote-left,
+        .client-quote-form blockquote .custom-quote-left {
             top: 0;
             left: 10px;
         }
-        .client-quote blockquote .custom-quote-right {
+        .client-quote blockquote .custom-quote-right,
+        .client-quote-form blockquote .custom-quote-right{
             bottom: 0;
             right: 10px;
         }
@@ -400,9 +439,6 @@
             #navbar {
                 display: block;
             }
-            .navbar-fixed-top.affix-top {
-                background-color: rgba(0,0,0,0.2) !important;
-            }
         }
         #testimonials {
             background-color: #F8F8F8;
@@ -414,12 +450,21 @@
             font-size: 3em;
         }
         .benefits h1, .benefits h2 {
-            color: #FFC820;
+            font-family: 'Roboto', sans-serif;
+            color: #dd333b;
+            margin-top: 0;
+        }
+        .benefits ul {
+            list-style: none;
         }
         .benefits ul li {
-            margin: 10px 0;
-            padding: 0 10px;
-            font-size: 1.2em;
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.5em;
+            font-family: 'Roboto', sans-serif;
+        }
+        .benefits ul li i {
+            color: #31B73A;
         }
         #hero-area {
             padding-bottom: 0;
@@ -520,7 +565,7 @@
             </div>
             <div class="collapse navbar-collapse hidden-md hidden-sm col-md-6 pull-right" id="navbar">
                 <ul class="nav navbar-nav">
-                    <li class="pull-right">Talk To Customer Service Agent <a href="tel:003539696091"><i class="fa fa-phone"></i>&nbsp;(01) 969 6091</a></li>
+                    <li class="pull-right">Talk To Customer Service Agent <a href="tel:003539696091"><i class="fa fa-phone"></i>&nbsp;(01) 969 6091&nbsp;(ROI)</a>&nbsp;<span style="color: #dd333b; font-weight: bold">&nbsp;&nbsp;&nbsp;|&nbsp;</span><a href="tel:00441613852034"><i class="fa fa-phone"></i>&nbsp;+44 (01) 613 852 034&nbsp;(UK)</a></li>
                 </ul>
             </div>
         </div>
@@ -533,8 +578,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="title-2">Free PropDocs - It's a game changer for agents!</h2>
-                <h4 class="subtitle-2">PropDocs offers you a simple system of staying on top of what needs to be done to progress a residential rental property through the "move-in" and "move-out" stage of rental cycle, thus ensuring your customer maximises their properties return on investment. Oh and we pay you!</h4>
+                <h2 class="title-2-main">PropDocs - It's a game changer for Estate Agents!</h2>
+                <h4 class="subtitle-2">PropDocs Digitally streamlines each task at the "move-in" and "move-out" stage of rental property's life-cycle, resulting in less costs,a new revenue stream, fewer delays and better experience for all.</h4>
             </div>
         </div>
 
@@ -546,23 +591,31 @@
                         <iframe width="300" height="169" src="https://www.youtube.com/embed/I-DYQtdqfmQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
+                <div class="client-quote-form">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">They make the whole experience of setting up a new tenancy easy and for me that’s the essence of business, making the experience easy for the customer and I couldn’t recommend it more.</p>
+                        <i class="fa fa-quote-left fa-5x custom-quote-left" aria-hidden="true"></i>
+                        <i class="fa fa-quote-right fa-5x custom-quote-right" aria-hidden="true"></i>
+                        <footer class="blockquote-footer">Regina Mangan. <cite title="Source Title">Owner, Bookaroom</cite></footer>
+                    </blockquote>
+                </div>
                 <div class="benefits">
-                    <h1 class="title-2">Benefits included with your free account:</h1>
+                    <h2 class="title-2">Benefits included with your free account</h2>
                     <ul>
-                        <li>PropDocs offers you an unlimited amount of securely branded property documents to send each month for electronic signature thus ensuring significant cost savings and efficiencies</li>
-                        <li>PropDocs is linked to our utility management service thereby ensuring you and your staff receive a commission on every tenancy set-up</li>
-                        <li>Instantly see your document status using your very own PropDoc dashboard which also identifies what additional steps are needed to ensure a rental property’s occupancy is maximised</li>
-                        <li>Our system will automatically remind recipients for signature so you don’t have to</li>
-                        <li>A complete audit trail of all tenant communication and other relevant property documents is available in one simple to access location</li>
-                        <li>A complete deposit management service for your landlords and tenants (optional)</li>
-                        <li>Boost your reputation by offering landlords and tenants a streamlined digital service that maximises occupancy, saves time and provides greater return on investment</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Send an unlimited amount of property documents for electronic signature each month</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Significantly reduce your administration and labour costs by reducing paper, postage and delays</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Store all documents securely and provide a complete digital audit trail for each property</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Generate a new ongoing revenue stream from the commission we pay you and your staff</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Track the status of tasks that must be complete in order to occupy an empty property</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Reduce all associated hassle of sourcing property data and moving tenants in and out</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Avail of our complete deposit management service (optional)</li>
                     </ul>
                 </div>
             </div>
             <div id="top" class="col-md-5 col-sm-5 col-xs-12 animated fadeInRight delay-0-5">
-                <div class="row" style="background-color: #004E89; padding: 0 2%;">
+                <div class="row" style="background-color: rgba(40,41,54,0.8); padding: 0 2%; border-bottom: 1px solid #fff;">
                     <div class="col-xs-12">
-                        <h2 class="title-2">Join free for a month</h2>
+                        <h2 class="title-2-form">Join free for a month</h2>
                         <h4 class="subtitle-3">Once signed in, you’ll have unlimited access to the PropDocs portal and all its features, for free! Use anytime, cancel anytime.</h4>
                     </div>
                 </div><!-- / .row-->
@@ -572,6 +625,10 @@
                             <div class="form-group">
                                 <label for="form-name">What do we call you?</label>
                                 <input type="text" class="form-control" id="form-name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-name">Company Name</label>
+                                <input type="email" class="form-control" id="form-email" placeholder="Company Name">
                             </div>
                             <div class="form-group">
                                 <label for="form-name">Your work email</label>
@@ -598,58 +655,21 @@
                         </form>
                     </div>
                 </div><!-- / .row-->
+                <div class="row" style="padding-top: 0 ">
+                    <div class="client-quote-form">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">The staff at Property Button have taken all of the hassle out of utility transfers and they so in a friendly and approachable manner. The commission we receive adds up to the same cost of an employee a year – not mention the actual cost savings made too!</p>
+                            <i class="fa fa-quote-left fa-5x custom-quote-left" aria-hidden="true"></i>
+                            <i class="fa fa-quote-right fa-5x custom-quote-right" aria-hidden="true"></i>
+                            <footer class="blockquote-footer">Patrick Burke. <cite title="Source Title">Director of Sherry Fitzgerald Lettings</cite></footer>
+                        </blockquote>
+                    </div>
+                </div><!-- / .row-->
             </div>
         </div><!-- / .row-->
     </div>
 </section>
 <!-- Hero Area Section End-->
-
-<!-- Trusted By Section -->
-<section id="testimonials">
-    <h1 class="title">What Our Partners Say</h1>
-    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <div class="client-quote">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">They make the whole experience of setting up a new tenancy easy and for me that’s the essence of business, making the experience easy for the customer and I couldn’t recommend it more.</p>
-                        <i class="fa fa-quote-left fa-5x custom-quote-left" aria-hidden="true"></i>
-                        <i class="fa fa-quote-right fa-5x custom-quote-right" aria-hidden="true"></i>
-                        <footer class="blockquote-footer">Regina Mangan. <cite title="Source Title">Owner, Bookaroom</cite></footer>
-                    </blockquote>
-                </div>
-            </div>
-            <div class="item">
-                <div class="client-quote">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">The staff at Property Button have taken all of the hassle out of utility transfers and they so in a friendly and approachable manner. The commission we receive adds up to the same cost of an employee a year – not mention the actual cost savings made too!</p>
-                        <i class="fa fa-quote-left fa-5x custom-quote-left" aria-hidden="true"></i>
-                        <i class="fa fa-quote-right fa-5x custom-quote-right" aria-hidden="true"></i>
-                        <footer class="blockquote-footer">Patrick Burke. <cite title="Source Title">Director of Sherry Fitzgerald Lettings</cite></footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</section>
-<!-- Trusted By Section End -->
 
 <!-- Trusted By Section -->
 <section id="trusted">
@@ -792,13 +812,13 @@
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-md-offset-1">
                 <div class="faq-item">
                     <h4>Is there a catch?</h4>
-                    <p>Nope, no funny business. All it takes to begin using our PropDocs feature is your email address and a few other pieces of information outlined above and you’ll have full access for a month.</p>
+                    <p>Nope, no funny business. All it takes to begin using our PropDocs feature is your email address and a few other pieces of information outlined above and you’ll enjoy FULL access for a month. Use anytime, cancel anytime.</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                 <div class="faq-item">
                     <h4>Are there any limits?</h4>
-                    <p>When you sign up for your free month, you will have FULL access to all benefits and features of PropDocs. After a month, you can decide if you would like to continue using the service for a monthly subscription of just £30 (€40). You can also decide to pay for a full year up-front at a 25% reduced rate. There will never be any cancellation fees or funny business. Use anytime, cancel anytime.</p>
+                    <p>After a free month of full access, you can decide if you would like to continue using the service for a monthly subscription of just £20 (€30). You can also decide to pay up-front for a full year subscription at a 25% reduced rate. There will never be any cancellation fees.</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
@@ -824,19 +844,19 @@
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-md-offset-1">
                 <div class="faq-item">
                     <h4>Do I need to download any software?</h4>
-                    <p>There is no software requirements or installation. It couldn’t be easier, Property Button is an online portal and so all you need is your login details.</p>
+                    <p>There are no software or installation requirements. It couldn't be easier, Property Button is an online portal and so all you need is your login details.</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                 <div class="faq-item">
                     <h4>Do I need training?</h4>
-                    <p>It is very user friendly but Property Button will guide you through the process over the phone or in person if needed</p>
+                    <p>Our portal is very user friendly but Property Button will guide you through the process over the phone or in person if needed.</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                 <div class="faq-item">
                     <h4>Will the tenant have a choice of supplier?</h4>
-                    <p>Yes, The tenant has can choose any supplier they like, Property Button will give the tenant the information needed such as tariffs and deals to make the best decision.</p>
+                    <p>Of course! The tenant can choose any supplier and service they want, Property Button will give the tenant the information needed to make an informed decision that suits their needs.</p>
                 </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
@@ -848,7 +868,7 @@
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                 <div class="faq-item">
                     <h4>What do you do with the property and tenant information?</h4>
-                    <p>We will not do a thing without prior consent from you and the tenant. Once we receive tenant consent, we will use their information to identify what services are currently available at the property and assist them in setting up their accounts using the information they have already provided to you.</p>
+                    <p>We will not do a thing without prior consent from you and the tenant. Once we receive tenant consent, we will use their information to identify what services are currently available at the property using the information provided.</p>
                 </div>
             </div>
         </div><!-- / .row-->
@@ -856,34 +876,19 @@
 </section>
 <!-- FAQ Section End -->
 
-
-<!--
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="howitworks-item wow fadeInLeft" data-wow-delay=".9s">
-                    <a href="#"><img src="assets/img/portfolio/img3.jpg" alt=""></a>
-                    <div class="overlay">
-                        <div class="icons">
-                            <a data-lightbox="image1" href="assets/img/portfolio/img3.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
--->
-
 <!-- Call To Action Section -->
 <section id="action">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <p class="text-center">
-                    <a data-scroll class="btn btn-lg btn-primary" href="#top">Join free for a month</a>
+                    <a data-scroll class="btn btn-lg btn-primary" href="#top">Join for free</a>
                 </p>
             </div>
         </div>
     </div>
 </section>
 <!-- Call To Action Section End -->
-
 
 <!-- Contact Section -->
 <section id="contact">
@@ -898,8 +903,17 @@
                     <a class="social" href="https://www.linkedin.com/company/3787049" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
                 </div>
                 <div class="contact-info">
-                    <p><i class="fa fa-phone"></i> <a href="tel:003539696091">(01) 969 6091</a></p>
-                    <p><i class="fa fa-envelope"></i> <a href="mailto:info@propertybutton.io">info@propertybutton.io</a></p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <p>Republic of Ireland<br/><i class="fa fa-phone"></i> <a href="tel:0035319696091">+353 (01) 969 6091</a></p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <p><i class="fa fa-envelope"></i> <a href="mailto:info@propertybutton.io">info@propertybutton.io</a></p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <p>United Kingdom<br/><i class="fa fa-phone"></i> <a href="tel:00441613852034">+44 (01) 613 852 034</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
